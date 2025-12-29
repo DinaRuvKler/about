@@ -159,7 +159,7 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 30px;
+    gap: 15px;
     margin: 40px 0;
   }
 
@@ -197,4 +197,58 @@ a {
 
 .content-block:last-of-type {
   margin-bottom: 60px; /* רווח גדול מספיק כדי שלא יתנגש בפוטר */
+}
+
+@media (max-width: 480px) {
+  /* מוסיף ריווח מהקצוות לכל הדף */
+  body {
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+
+  /* גורם לדיבים לתפוס 100% מהרוחב הזמין (בתוך הפדינג של הבודי) */
+  .div1, .div2, .content-block {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* מסדר תמונה מעל טקסט */
+    align-items: center;
+    text-align: center;
+  }
+
+  /* ביטול הציפה (Float) של התמונות כדי שיעמדו במרכז */
+  .about-img, .comp-img {
+    float: none; 
+    margin: 0 auto 5px auto; /* מרכוז התמונה ורווח מתחתיה */
+    height: auto;
+    max-width: 80%; /* שהתמונה לא תהיה ענקית מדי */
+  }
+
+  /* הקטנת כותרות שיתאימו למסך קטן */
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  /* פוטר - שיהיה בטור במקום שורה אם אין מקום */
+  footer {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+  /* מצמצם את המרווח מתחת לכל הכותרות בבלוק התוכן */
+.content-block h2 {
+  margin-bottom: 1px; /* מרווח קטן מאוד */
+}
+
+/* מצמצם את המרווח מעל הפסקאות */
+.content-block p {
+  margin-top: 0;      /* מבטל את המרווח העליון לחלוטין */
+  margin-bottom: 15px; /* משאיר מרווח רק למטה, בין פסקאות */
+}
 }
