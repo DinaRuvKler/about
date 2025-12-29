@@ -3,15 +3,14 @@ body {
   margin: 0;
   padding: 0;
   direction: rtl;
-   width: 100%;
+  width: 100%;
   min-height: 100vh;
   display: flex;
-   flex-direction: column;
+  flex-direction: column;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif, sans-serif;
   align-items: center;
 }
-
 
 h1 {
   margin-bottom: 10px;
@@ -66,12 +65,14 @@ body::after {
 .div1 {
   margin-top: 50px;
   margin-bottom: 50px;
+  width: 80%;
 }
 
 .div2 {
   display: flex;
   align-items: flex-start;
   margin-bottom: 100px;
+  width: 80%;
 }
 
 .about-img {
@@ -143,7 +144,7 @@ footer {
   margin-top: auto;
   text-align: center;
   color: rgb(251, 241, 241);
-    margin-top: auto; 
+  margin-top: auto;
 }
 
 @media (max-width: 768px) {
@@ -151,12 +152,12 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 30px; 
-    margin: 40px 0; 
+    gap: 30px;
+    margin: 40px 0;
   }
 
   p {
-    line-height: 1.6; 
+    line-height: 1.6;
   }
 
   .about-img,
@@ -164,8 +165,3 @@ footer {
     height: 120px;
   }
 }
-
-
-
-
-
