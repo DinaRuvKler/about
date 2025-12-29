@@ -1,16 +1,52 @@
-/* הגדרות כלליות */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   direction: rtl;
-  /* נותן לדף גובה מינימלי של כל המסך */
-  min-height: 100vh; 
-  position: relative;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, sans-serif;
+  align-items: center;
 }
 
+h1 {
+  margin-bottom: 10px;
+  color: #5b010179;
+  text-shadow: 0 0 3px #912121;
+  -webkit-text-stroke: 0.01px #954343;
+}
 
-/* רקע */
+hr {
+  border-top: solid #ba5f5f;
+  /* box-shadow: 2px 2px 10px #ba5f5f; */
+  width: 70%;
+  margin-top: 0.1;
+}
+
+img {
+  height: 25px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #0e0e0e;
+  background-color: rgb(224, 147, 147);
+  border-radius: 10px;
+  color: #0e0e0e;
+  padding: 5px;
+  padding-left: 10px;
+  box-shadow: 5px 8px 10px 0px rgba(68, 6, 6, 0.483);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, sans-serif;
+  font-size: 10pt;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -30,27 +66,62 @@ body::after {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-/* כותרות ומרכז */
-h1 {
-  text-align: center;
-  margin-top: 40px;
-  color: #5b010179;
-  text-shadow: 0 0 3px #912121;
+.div1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 80%;
 }
 
-hr {
-  border: none;
-  border-top: 2px solid #ba5f5f;
-  width: 70%;
-  margin: 20px auto;
+.div2 {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 100px;
+  width: 80%;
 }
 
-/* קישורים */
+.about-img {
+  height: 150px;
+  border: 3px solid rgb(88, 13, 13);
+  border-radius: 20px 20px 0px 0px;
+  float: right;
+  padding-top: 60px;
+  margin-top: 20px;
+  margin-left: 20px;
+  box-shadow: 1px 4px 10px 0px #954343;
+}
+
+.comp-img {
+  height: 150px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: 1px 4px 10px 0px #954343;
+}
+
+p {
+  max-width: 800px;
+}
+
+.contect {
+  height: 35px;
+  width: auto;
+}
+
+.horizontal {
+  gap: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.horizontal a:hover img {
+  transform: scale(1.15);
+}
+
 .horizontal {
   display: flex;
   gap: 20px;
-  justify-content: center;
-  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center; /* מרכז את כולם אופקית */
 }
 
 .link-icon-text {
@@ -61,70 +132,69 @@ hr {
   color: #0e0e0e;
   font-weight: bold;
   padding: 6px 10px;
-  transition: all 0.25s ease;
+  border-radius: 15px;
+  transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
 .link-icon-text:hover {
-  transform: scale(1.1);
+  background-color: rgba(122, 3, 3, 0.234);
+  transform: scale(1.08);
 }
 
-.contect {
-  height: 35px;
-}
-
-/* בלוקים של תוכן - מחזיר אותם להיות רגילים */
-.div1, .div2, .content-block {
-  width: 85%;
-  max-width: 900px;
-  margin: 40px auto;
-  overflow: auto; /* שומר שהתמונות עם ה-float לא יברחו */
-}
-
-.about-img {
-  height: 150px;
-  border: 3px solid rgb(88, 13, 13);
-  border-radius: 20px 20px 0 0;
-  float: right;
-  margin-left: 20px;
-  box-shadow: 1px 4px 10px #954343;
-}
-
-.comp-img {
-  height: 150px;
-  float: left;
-  margin-right: 20px;
-  border-radius: 20px 20px 0 0;
-  box-shadow: 1px 4px 10px #954343;
-}
-
-/* --- הפוטר שנדבק למטה בלי להרוס את הדף --- */
 footer {
   background-color: #912121;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
   width: 100%;
-  
-  /* הקסם: ממקם אותו בתחתית של ה-body */
-  position: absolute;
-  bottom: 0;
+  padding: 10px 40px;
+  margin-top: auto;
+  text-align: center;
+  color: rgb(251, 241, 241);
+  display: flex;
+  align-items: center; /* מרכוז אנכי (גובה) */
+  justify-content: space-between; /* זה מה שדוחף אותם לקצוות */
+  box-sizing: border-box; /* מוודא שה-padding לא מגדיל את רוחב הדף */
 }
 
-
- /* הגדרות למובייל (טלפונים) */
-@media (max-width: 480px) {
-  .link-icon-text {
-    font-size: 12px;     
-    gap: 4px;         
-    padding: 4px 6px;    
+@media (max-width: 768px) {
+  .content-block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    margin: 40px 0;
   }
 
-  .contect {
-    height: 25px;      
+  /* הגדרות למובייל (טלפונים) */
+  @media (max-width: 480px) {
+    .link-icon-text {
+      font-size: 12px;
+      gap: 4px;
+      padding: 4px 6px;
+    }
+
+    .contect {
+      height: 25px;
+    }
+
+    .horizontal {
+      gap: 10px;
+    }
   }
 
-  .horizontal {
-    gap: 10px;          
+  p {
+    line-height: 1.6;
+  }
+
+  .about-img,
+  .comp-img {
+    height: 120px;
   }
 }
 
+a {
+  text-decoration: none;
+  color: #0e0e0e;
+}
+
+.content-block:last-of-type {
+  margin-bottom: 60px; /* רווח גדול מספיק כדי שלא יתנגש בפוטר */
+}
