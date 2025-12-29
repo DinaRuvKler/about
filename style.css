@@ -215,7 +215,6 @@ a {
     display: flex;
     flex-direction: column; /* מסדר תמונה מעל טקסט */
     align-items: center;
-    text-align: center;
   }
 
   /* ביטול הציפה (Float) של התמונות כדי שיעמדו במרכז */
@@ -252,3 +251,4 @@ a {
   margin-bottom: 15px; /* משאיר מרווח רק למטה, בין פסקאות */
 }
 }
+
