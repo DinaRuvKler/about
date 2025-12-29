@@ -3,19 +3,14 @@ body {
   margin: 0;
   padding: 0;
   direction: rtl;
-}
-
-body {
-  width: 100%;
+   width: 100%;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+   flex-direction: column;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif, sans-serif;
-  margin-bottom: 60px;
 }
+
 
 h1 {
   margin-bottom: 10px;
@@ -147,6 +142,7 @@ footer {
   margin-top: auto;
   text-align: center;
   color: rgb(251, 241, 241);
+    margin-top: auto; 
 }
 
 @media (max-width: 768px) {
@@ -154,12 +150,12 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 30px; /* רווח בין התמונה לטקסט */
-    margin: 40px 0; /* רווח בין בלוקים */
+    gap: 30px; 
+    margin: 40px 0; 
   }
 
   p {
-    line-height: 1.6; /* קריא יותר במובייל */
+    line-height: 1.6; 
   }
 
   .about-img,
@@ -167,21 +163,7 @@ footer {
     height: 120px;
   }
 }
-/* מוודא שהדף תמיד לפחות בגובה המסך */
-body {
-  margin: 0;
-  min-height: 100vh; 
-  display: flex;
-  flex-direction: column;
-}
 
-/* הפוטר שלך עם השינוי היחיד שחשוב */
-footer {
-  background-color: #912121;
-  width: 100%;
-  padding: 10px 40px;
-  text-align: center;
-  color: rgb(251, 241, 241);
-  
-  margin-top: auto; /* זה מה שידחוף אותו למטה בלי להתנגש בכלום */
-}
+
+
+
