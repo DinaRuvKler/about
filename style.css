@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif, sans-serif;
-  align-items: center;
+  align-items: stretch;
 }
 
 h1 {
@@ -165,3 +165,4 @@ footer {
     height: 120px;
   }
 }
+
