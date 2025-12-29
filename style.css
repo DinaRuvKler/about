@@ -215,6 +215,7 @@ a {
     display: flex;
     flex-direction: column; /* מסדר תמונה מעל טקסט */
     align-items: center;
+    text-align: center;
   }
 
   /* ביטול הציפה (Float) של התמונות כדי שיעמדו במרכז */
@@ -252,3 +253,7 @@ a {
 }
 }
 
+footer button img {
+  transform: scaleX(-1);
+  /* אם יש לך כבר הגדרות גובה, פשוט תוסיפי את השורה למעלה מתחתיהן */
+}
