@@ -111,4 +111,20 @@ footer {
 }
 
 
+ /* הגדרות למובייל (טלפונים) */
+@media (max-width: 480px) {
+  .link-icon-text {
+    font-size: 12px;     
+    gap: 4px;         
+    padding: 4px 6px;    
+  }
+
+  .contect {
+    height: 25px;      
+  }
+
+  .horizontal {
+    gap: 10px;          
+  }
+}
 
