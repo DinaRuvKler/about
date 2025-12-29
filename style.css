@@ -7,8 +7,6 @@ html, body {
   min-height: 100vh; 
   position: relative;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  /* מרווח בתחתית כדי שהפוטר לא יסתיר את הטקסט האחרון */
-  padding-bottom: 50px; 
 }
 
 
@@ -111,5 +109,6 @@ footer {
   position: absolute;
   bottom: 0;
 }
+
 
 
