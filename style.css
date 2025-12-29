@@ -66,6 +66,10 @@ body::after {
   margin-top: 50px;
   margin-bottom: 50px;
   width: 80%;
+  max-width: 1000px;     /* עוצר ברוחב מקסימלי מסוים כדי שלא יהיה רחב מדי */
+  margin: 20px auto;     /* ממרכז את הבלוק בדף */
+  overflow: hidden;      /* חשוב! גורם לדיב "להחזיק" את התמונות עם ה-float בפנים */
+  padding: 20px;
 }
 
 .div2 {
@@ -73,6 +77,10 @@ body::after {
   align-items: flex-start;
   margin-bottom: 100px;
   width: 80%;
+  max-width: 1000px;     /* עוצר ברוחב מקסימלי מסוים כדי שלא יהיה רחב מדי */
+  margin: 20px auto;     /* ממרכז את הבלוק בדף */
+  overflow: hidden;      /* חשוב! גורם לדיב "להחזיק" את התמונות עם ה-float בפנים */
+  padding: 20px;
 }
 
 .about-img {
@@ -165,4 +173,5 @@ footer {
     height: 120px;
   }
 }
+
 
