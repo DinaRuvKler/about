@@ -215,7 +215,7 @@ a {
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     align-items: center;
   }
 
@@ -301,3 +301,4 @@ button img {
   height: 18px; /* מתאים את גובה החץ לגובה הטקסט */
   width: auto;
 }
+
