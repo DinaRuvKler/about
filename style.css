@@ -7,8 +7,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, sans-serif;
+  font-family: "Assistant", sans-serif;
   align-items: center;
 }
 
@@ -17,6 +16,8 @@ h1 {
   color: #5b010179;
   text-shadow: 0 0 3px #912121;
   -webkit-text-stroke: 0.01px #954343;
+  align-items: center;
+  text-align: center;
 }
 
 hr {
@@ -70,6 +71,9 @@ body::after {
   margin-top: 50px;
   margin-bottom: 50px;
   width: 80%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .div2 {
@@ -100,17 +104,13 @@ body::after {
 
 p {
   max-width: 800px;
+  direction: rtl;
+  text-align: right;
 }
 
 .contect {
   height: 35px;
   width: auto;
-}
-
-.horizontal {
-  gap: 20px;
-  display: inline-flex;
-  align-items: center;
 }
 
 .horizontal a:hover img {
@@ -121,7 +121,7 @@ p {
   display: flex;
   gap: 20px;
   align-items: center;
-  justify-content: center; /* מרכז את כולם אופקית */
+  justify-content: center;
 }
 
 .link-icon-text {
@@ -144,40 +144,124 @@ p {
 footer {
   background-color: #912121;
   width: 100%;
-  padding: 10px 40px;
-  margin-top: auto;
-  text-align: center;
-  color: rgb(251, 241, 241);
   display: flex;
-  align-items: center; /* מרכוז אנכי (גובה) */
-  justify-content: space-between; /* זה מה שדוחף אותם לקצוות */
-  box-sizing: border-box; /* מוודא שה-padding לא מגדיל את רוחב הדף */
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10%;
+  box-sizing: border-box;
+  margin-top: auto;
+  color: rgb(251, 241, 241);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .content-block {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+
     gap: 15px;
     margin: 40px 0;
   }
+  .div1,
+  .div2,
+  .content-block {
+    width: 80%;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+  }
 
-  /* הגדרות למובייל (טלפונים) */
-  @media (max-width: 480px) {
-    .link-icon-text {
-      font-size: 12px;
-      gap: 4px;
-      padding: 4px 6px;
-    }
+  /* מוודא שגם ה-H1 וה-HR לא נצמדים לקצוות */
+  h1,
+  hr {
+    width: 80%;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+}
 
-    .contect {
-      height: 25px;
-    }
+a {
+  text-decoration: none;
+  color: #0e0e0e;
+}
 
-    .horizontal {
-      gap: 10px;
-    }
+.content-block:last-of-type {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 480px) {
+  .div1,
+  .div2,
+  .content-block {
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-img,
+  .comp-img {
+    float: none;
+    margin: 0 auto 15px auto;
+    width: 80%;
+    max-width: 80%;
+    height: auto !important;
+    display: block;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #912121;
+    /* פקודות המתיחה הקריטיות: */
+    width: 100%;
+    box-sizing: border-box;
+    align-self: stretch;
+  }
+
+  .content-block h2 {
+    width: 80%;
+    text-align: right;
+    margin: 0 auto 5px auto;
+  }
+
+  .content-block p {
+    max-width: 80%;
+    margin: 0 auto 15px auto;
+    text-align: right;
+    padding: 0;
+  }
+  .link-icon-text {
+    font-size: 12px;
+    gap: 4px;
+    padding: 4px 6px;
+  }
+
+  .contect {
+    height: 25px;
+  }
+
+  .horizontal {
+    gap: 10px;
   }
 
   p {
@@ -188,72 +272,31 @@ footer {
   .comp-img {
     height: 120px;
   }
-}
 
-a {
-  text-decoration: none;
-  color: #0e0e0e;
-}
-
-.content-block:last-of-type {
-  margin-bottom: 60px; /* רווח גדול מספיק כדי שלא יתנגש בפוטר */
-}
-
-@media (max-width: 480px) {
-  /* מוסיף ריווח מהקצוות לכל הדף */
-  body {
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
+  .link-icon-text span {
+    display: none;
   }
 
-  /* גורם לדיבים לתפוס 100% מהרוחב הזמין (בתוך הפדינג של הבודי) */
-  .div1, .div2, .content-block {
-    width: 100%;
+  .horizontal {
+    gap: 30px;
     margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column; /* מסדר תמונה מעל טקסט */
-    align-items: center;
-    text-align: center;
   }
-
-  /* ביטול הציפה (Float) של התמונות כדי שיעמדו במרכז */
-  .about-img, .comp-img {
-    float: none; 
-    margin: 0 auto 5px auto; /* מרכוז התמונה ורווח מתחתיה */
-    height: auto;
-    max-width: 80%; /* שהתמונה לא תהיה ענקית מדי */
-  }
-
-  /* הקטנת כותרות שיתאימו למסך קטן */
-  h1 {
-    font-size: 1.5rem;
-  }
-  
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  /* פוטר - שיהיה בטור במקום שורה אם אין מקום */
-  footer {
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-  }
-  /* מצמצם את המרווח מתחת לכל הכותרות בבלוק התוכן */
-.content-block h2 {
-  margin-bottom: 1px; /* מרווח קטן מאוד */
-}
-
-/* מצמצם את המרווח מעל הפסקאות */
-.content-block p {
-  margin-top: 0;      /* מבטל את המרווח העליון לחלוטין */
-  margin-bottom: 15px; /* משאיר מרווח רק למטה, בין פסקאות */
-}
 }
 
 footer button img {
   transform: scaleX(-1);
-  /* אם יש לך כבר הגדרות גובה, פשוט תוסיפי את השורה למעלה מתחתיהן */
+}
+
+button a {
+  display: flex; /* הופך את הקישור למכולה גמישה */
+  align-items: center; /* ממרכז את הטקסט והחץ אנכית */
+  gap: 8px; /* יוצר רווח קבוע בין הטקסט לחץ */
+  text-decoration: none; /* מבטל קו תחתון אם קיים */
+  color: inherit; /* שומר על צבע הטקסט המקורי */
+}
+
+button img {
+  transform: scaleX(-1); /* הופך את החץ שיצביע שמאלה */
+  height: 18px; /* מתאים את גובה החץ לגובה הטקסט */
+  width: auto;
 }
